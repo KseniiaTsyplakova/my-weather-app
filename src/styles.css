@@ -10,9 +10,6 @@ h2,
   font-family: "Raleway", sans-serif;
   font-weight: 300;
 }
-.current-values {
-  white-space: nowrap;
-}
 #celsius-link,
 #fahrenheit-link {
   text-decoration: none;
