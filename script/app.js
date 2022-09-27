@@ -48,7 +48,7 @@ function displayWeatherConditions(response) {
   document.querySelector("#temperature-description").innerHTML =
     response.data.weather[0].description;
   let condition = response.data.weather[0].main;
-  let iconWeather = document.querySelector("#iconWeather");
+  let iconWeather = document.querySelectorAll("#iconWeather");
   switch (condition) {
     case "Clear":
       iconWeather.src = "/images/sun.png";
