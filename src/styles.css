@@ -10,11 +10,7 @@ h2,
   font-family: "Raleway", sans-serif;
   font-weight: 300;
 }
-#celsius-link,
-#fahrenheit-link {
-  text-decoration: none;
-  color: rgb(91, 160, 171);
-}
+
 #temp {
   text-decoration: none;
   color: #000;
@@ -28,6 +24,18 @@ h2,
 
 #temperature-description::first-letter {
   text-transform: capitalize;
+}
+
+.units a {
+  color: rgb(91, 160, 171);
+  cursor: default;
+  text-decoration: none;
+}
+
+.units .active {
+  text-decoration: none;
+  color: #000;
+  cursor: default;
 }
 
 footer {

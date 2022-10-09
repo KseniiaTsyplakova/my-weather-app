@@ -30,9 +30,11 @@ currentDate.innerHTML = now;
 
 function displayWeatherConditions(response) {
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+
+  let temperatureElement = document.querySelector("#temp");
+  celsiusTemperature = response.data.main.temp;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
@@ -114,6 +116,7 @@ function search(event) {
   h1.innerHTML = city;
   searchCity(city);
 }
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
@@ -133,15 +136,26 @@ button.addEventListener("click", getCurrentLocation);
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let tempElement = document.querySelector("#temp");
-  tempElement.innerHTML = Math.round(tempElement * 1.8 + 32);
+  let temperatureElement = document.querySelector("#temp");
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
-  let tempElement = document.querySelector("#temp");
-  tempElement.innerHTML = Math.round((tempElement - 32) * 0.5556);
+
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+
+  let temperatureElement = document.querySelector("#temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+
+let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
@@ -150,23 +164,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
 searchCity("Sydney");
-
-/* code will be used with API
-let city = prompt("Enter a city?");
-if (city === null || city === "") {
-  alert(`You did not enter a city. Please, try again`);
-} else {
-  city = city.toLowerCase().trim();
-  if (weather[city] !== undefined) {
-    let temperature = weather[city].temp;
-    let humidity = weather[city].humidity;
-
-    city = city
-      .toLowerCase()
-      .split(" ")
-      .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-      .join(" ");
-
-    let celsiusTemperature = Math.round(temperature);
-    let fahrenheitTemperature = Math.round(temperature * 1.8 + 32);
-*/
