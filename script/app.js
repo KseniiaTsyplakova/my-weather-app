@@ -36,8 +36,9 @@ function displayWeatherConditions(response) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 
   document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
+    (response.data.wind.speed * 3600) / 1000
   );
+
   document.querySelector("#humidity").innerHTML = Math.round(
     response.data.main.humidity
   );
@@ -163,4 +164,4 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-searchCity("Sydney");
+searchCity("Paris");
