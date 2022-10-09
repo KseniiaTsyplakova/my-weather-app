@@ -22,7 +22,18 @@
   </head>
   <body>
     <div class="container border border-2 p-5 mt-3">
-      <div class="row">
+      <form id="search-form">
+        <input
+          type="text"
+          placeholder="Enter a city"
+          autocomplete="off"
+          id="search-text-input"
+          class="text-input"
+        />
+        <input type="submit" value="Search" class="btn btn-light mb-1" />
+      </form>
+
+      <div class="row mt-2">
         <div class="col-9">
           <h1 id="city"></h1>
           <h2 id="current-date"></h2>
@@ -88,21 +99,6 @@
           <div class="days mb-2">Fri</div>
           <img src="images/cloudy-sun.png" alt="cloudy" width="50" />
           <div class="temp mt-2">25°15°</div>
-        </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-4"></div>
-        <div class="col-8">
-          <form id="search-form">
-            <input
-              type="text"
-              placeholder="Enter a city"
-              autocomplete="off"
-              autofocus
-              id="search-text-input"
-            />
-            <input type="submit" value="Search" class="btn btn-light mb-1" />
-          </form>
         </div>
       </div>
     </div>

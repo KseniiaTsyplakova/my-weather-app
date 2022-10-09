@@ -19,6 +19,17 @@ h2,
   text-decoration: none;
   color: #000;
 }
+.text-input {
+  width: 350px;
+}
+#temperature-description {
+  display: inline-block;
+}
+
+#temperature-description::first-letter {
+  text-transform: capitalize;
+}
+
 footer {
   text-align: center;
 }

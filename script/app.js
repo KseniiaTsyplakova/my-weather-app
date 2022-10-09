@@ -21,7 +21,7 @@ let months = [
 ];
 let month = months[now.getMonth()];
 
-let hours = now.getHours();
+let hours = (now.getHours() < 10 ? "0" : "") + now.getHours();
 
 let minutes = (now.getMinutes() < 10 ? "0" : "") + now.getMinutes();
 
