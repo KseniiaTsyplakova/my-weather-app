@@ -50,56 +50,58 @@ function displayWeatherConditions(response) {
   );
   document.querySelector("#temperature-description").innerHTML =
     response.data.weather[0].description;
+
   let condition = response.data.weather[0].main;
-  let iconWeather = document.querySelectorAll("#iconWeather");
+
+  let iconWeather = document.querySelector("#iconWeather");
   switch (condition) {
     case "Clear":
-      iconWeather.src = "/images/sun.png";
+      iconWeather.setAttribute("src", "images/sun.png");
       break;
     case "Clouds":
-      iconWeather.src = "/images/cloudy-sun.png";
+      iconWeather.setAttribute("src", "images/cloudy-sun.png");
       break;
     case "Snow":
-      iconWeather.src = "/images/snow.png";
+      iconWeather.setAttribute("src", "images/snow.png");
       break;
     case "Mist":
-      iconWeather.src = "/images/atmosphere.png";
+      iconWeather.setAttribute("src", "images/atmosphere.png");
       break;
     case "Smoke":
-      iconWeather.src = "/images/atmosphere.png";
+      iconWeather.setAttribute("src", "images/atmosphere.png");
       break;
     case "Haze":
-      iconWeather.src = "/images/atmosphere.png";
+      iconWeather.setAttribute("src", "images/atmosphere.png");
       break;
     case "Dust":
-      iconWeather.src = "/images/atmosphere.png";
+      iconWeather.setAttribute("src", "images/atmosphere.png");
       break;
     case "Fog":
-      iconWeather.src = "/images/atmosphere.png";
+      iconWeather.setAttribute("src", "images/atmosphere.png");
       break;
     case "Sand":
-      iconWeather.src = "/images/atmosphere.png";
+      iconWeather.setAttribute("src", "images/atmosphere.png");
       break;
     case "Ash":
-      iconWeather.src = "/images/atmosphere.png";
+      iconWeather.setAttribute("src", "images/atmosphere.png");
       break;
     case "Squall":
-      iconWeather.src = "/images/storm.png";
+      iconWeather.setAttribute("src", "images/storm.png");
       break;
     case "Tornado":
-      iconWeather.src = "/images/storm.png";
+      iconWeather.setAttribute("src", "images/storm.png");
       break;
     case "Rain":
-      iconWeather.src = "/images/rain.png";
+      iconWeather.setAttribute("src", "images/rain.png");
       break;
     case "Drizzle":
-      iconWeather.src = "/images/drizzle.png";
+      iconWeather.setAttribute("src", "images/drizzle.png");
       break;
     case "Thunderstorm":
-      iconWeather.src = "/images/thunder.png";
+      iconWeather.setAttribute("src", "images/thunder.png");
       break;
     default:
-      iconWeather.src = "/images/sun.png";
+      iconWeather.setAttribute("src", "images/atmosphere.png");
   }
 }
 
