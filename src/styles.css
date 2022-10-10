@@ -38,6 +38,16 @@ h2,
   cursor: default;
 }
 
+.coords {
+  display: flex;
+}
+
+.current-position {
+  margin-top: 8px;
+  margin-left: 8px;
+  opacity: 0.5;
+}
+
 footer {
   text-align: center;
 }

@@ -35,7 +35,18 @@
 
       <div class="row mt-2">
         <div class="col-9">
-          <h1 id="city"></h1>
+          <div class="coords">
+            <h1 id="city"></h1>
+            <span>
+              <img
+                src="images/geotag.png"
+                alt="geoposition"
+                width="30"
+                id="current-position"
+                class="current-position"
+              />
+            </span>
+          </div>
           <h2 id="current-date"></h2>
         </div>
         <div class="col-3 p-4">
@@ -68,9 +79,6 @@
           <p class="bold">
             <span id="max-temp"></span>° / <span id="min-temp"></span> °
           </p>
-          <button type="button" id="current" class="btn btn-light">
-            Current
-          </button>
         </div>
       </div>
       <div

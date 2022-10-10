@@ -134,7 +134,7 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-let button = document.querySelector("#current");
+let button = document.querySelector("#current-position");
 button.addEventListener("click", getCurrentLocation);
 
 function convertToFahrenheit(event) {
