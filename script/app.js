@@ -28,6 +28,27 @@ let minutes = (now.getMinutes() < 10 ? "0" : "") + now.getMinutes();
 now = `${day}, ${date} ${month} ${hours}:${minutes}`;
 currentDate.innerHTML = now;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row row-cols-5 text-center border border-1 border-dark p-3 mt-3">`;
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+      <div class="weather-forecast-date">${day}</div>
+      <img src="images/sun.png" alt="" width="50" />
+      <div class="weather-forecast-temperatures">
+        <span class="weather-forecast-temperature-max">30° </span>
+        <span class="weather-forecast-temperature-min">17° </span>
+      </div>
+    </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeatherConditions(response) {
   document.querySelector("#city").innerHTML = response.data.name;
 
@@ -167,3 +188,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
 searchCity("Paris");
+
+displayForecast();
