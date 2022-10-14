@@ -41,14 +41,67 @@ function displayForecast(response) {
 
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row row-cols-5 text-center border border-1 border-dark p-3 mt-3">`;
+  let iconForecast;
 
   forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
+      let condition = response.data.daily[index].weather[0].main;
+
+      switch (condition) {
+        case "Clear":
+          iconForecast = "images/sun.png";
+          break;
+        case "Clouds":
+          iconForecast = "images/cloudy-sun.png";
+          break;
+        case "Snow":
+          iconForecast = "images/snow.png";
+          break;
+        case "Mist":
+          iconForecast = "images/atmosphere.png";
+          break;
+        case "Smoke":
+          iconForecast = "images/atmosphere.png";
+          break;
+        case "Haze":
+          iconForecast = "images/atmosphere.png";
+          break;
+        case "Dust":
+          iconForecast = "images/atmosphere.png";
+          break;
+        case "Fog":
+          iconForecast = "images/atmosphere.png";
+          break;
+        case "Sand":
+          iconForecast = "images/atmosphere.png";
+          break;
+        case "Ash":
+          iconForecast = "images/atmosphere.png";
+          break;
+        case "Squall":
+          iconForecast = "images/storm.png";
+          break;
+        case "Tornado":
+          iconForecast = "images/storm.png";
+          break;
+        case "Rain":
+          iconForecast = "images/rainy-day.png";
+          break;
+        case "Drizzle":
+          iconForecast = "images/drizzle.png";
+          break;
+        case "Thunderstorm":
+          iconForecast = "images/thunder.png";
+          break;
+        default:
+          iconForecast = "images/atmosphere.png";
+      }
+
       forecastHTML =
         forecastHTML +
         `<div class="col">
       <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-      <img src="images/sun.png" id="iconWeather" alt="" width="50" />
+      <img src="${iconForecast}" alt="" width="50" />
       <div class="weather-forecast-temperatures">
         <span class="weather-forecast-temperature-max">${Math.round(
           forecastDay.temp.max
@@ -136,7 +189,7 @@ function displayWeatherConditions(response) {
       iconWeather.setAttribute("src", "images/storm.png");
       break;
     case "Rain":
-      iconWeather.setAttribute("src", "images/rain.png");
+      iconWeather.setAttribute("src", "images/rainy-day.png");
       break;
     case "Drizzle":
       iconWeather.setAttribute("src", "images/drizzle.png");
