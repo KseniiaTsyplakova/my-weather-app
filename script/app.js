@@ -48,7 +48,7 @@ function displayForecast(response) {
         forecastHTML +
         `<div class="col">
       <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-      <img src="images/sun.png" alt="" width="50" />
+      <img src="images/sun.png" id="iconWeather" alt="" width="50" />
       <div class="weather-forecast-temperatures">
         <span class="weather-forecast-temperature-max">${Math.round(
           forecastDay.temp.max
@@ -66,7 +66,6 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = `72bb9dab46b9ec3d65f423c63f27a9b8`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
 
