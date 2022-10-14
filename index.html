@@ -76,37 +76,23 @@
             <span id="temperature-description"></span>
           </h2>
           <p class="bold">
-            <span id="max-temp"></span>° / <span id="min-temp"></span> °
+            <span id="max-temp"></span>° /
+            <span id="min-temp" class="min-temp"></span> °
           </p>
         </div>
       </div>
-      <div
-        class="row row-cols-5 text-center border border-1 border-dark p-3 mt-3"
-      >
-        <div class="col">
-          <div class="days mb-2">Mon</div>
-          <img src="images/sun.png" alt="sun" width="50" />
-          <div class="temp mt-2">30°17°</div>
-        </div>
-        <div class="col">
-          <div class="days mb-2">Tues</div>
-          <img src="images/cloudy-sun.png" alt="cloudy" width="50" />
-          <div class="temp mt-2">24°14°</div>
-        </div>
-        <div class="col">
-          <div class="days mb-2">Wed</div>
-          <img src="images/rain.png" alt="rain" width="50" />
-          <div class="temp mt-2">21°13°</div>
-        </div>
-        <div class="col">
-          <div class="days mb-2">Thurs</div>
-          <img src="images/cloudy-sun.png" alt="cloudy" width="50" />
-          <div class="temp mt-2">23°13°</div>
-        </div>
-        <div class="col">
-          <div class="days mb-2">Fri</div>
-          <img src="images/cloudy-sun.png" alt="cloudy" width="50" />
-          <div class="temp mt-2">25°15°</div>
+      <div class="weather-forecast">
+        <div
+          class="row row-cols-5 text-center border border-1 border-dark p-3 mt-3"
+        >
+          <div class="col">
+            <div class="weather-forecast-date">Mon</div>
+            <img src="images/sun.png" alt="" width="50" />
+            <div class="weather-forecast-temperatures">
+              <span class="weather-forecast-temperature-max">30° </span>
+              <span class="weather-forecast-temperature-min">17° </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

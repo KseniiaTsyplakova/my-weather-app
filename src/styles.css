@@ -48,6 +48,23 @@ h2,
   opacity: 0.5;
 }
 
+.weather-forecast {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+}
+
+.weather-forecast-temperatures {
+  font-size: 18px;
+}
+
+.min-temp {
+  opacity: 0.6;
+}
+
 footer {
   text-align: center;
 }
