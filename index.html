@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
       rel="stylesheet"
     />
     <link
@@ -31,7 +31,11 @@
           id="search-text-input"
           class="text-input"
         />
-        <input type="submit" value="Search" class="btn btn-light mb-1" />
+        <input
+          type="submit"
+          value="Search"
+          class="btn btn-outline-secondary mb-1"
+        />
       </form>
 
       <div class="row mt-2">
@@ -50,7 +54,7 @@
           </div>
           <h2 id="current-date"></h2>
         </div>
-        <div class="col-3 p-4">
+        <div class="col-3 p-4 additionalInfo">
           <p>Wind: <span id="wind"></span> km/h</p>
           <p>Humidity: <span id="humidity"></span> %</p>
         </div>
@@ -76,7 +80,7 @@
             </span>
             <span id="temperature-description"></span>
           </h2>
-          <p class="bold">
+          <p class="bold currentMinMaxTemp">
             <span id="max-temp"></span>° /
             <span id="min-temp" class="min-temp"></span> °
           </p>
@@ -89,6 +93,7 @@
         <a
           href="https://github.com/KseniiaTsyplakova/my-weather-app"
           target="_blank"
+          class="gitLink"
           >Open-source code</a
         >
         by Kseniia Tsyplakova

@@ -40,7 +40,7 @@ function displayForecast(response) {
   let forecast = response.data.daily;
 
   let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row row-cols-5 text-center border border-1 border-dark p-3 mt-3">`;
+  let forecastHTML = `<div class="row row-cols-5 text-center border border-1 border-secondary rounded-2 p-3 mt-3">`;
   let iconForecast;
 
   forecast.forEach(function (forecastDay, index) {

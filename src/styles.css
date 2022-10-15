@@ -1,14 +1,8 @@
 .container {
-  font-family: "Raleway", sans-serif;
-  font-weight: 200;
-  max-width: 800px;
+  font-family: "Quicksand";
+  max-width: 780px;
   background: rgb(220, 236, 251);
-}
-h1,
-h2,
-.bold {
-  font-family: "Raleway", sans-serif;
-  font-weight: 300;
+  border-radius: 10px;
 }
 
 #temp {
@@ -17,6 +11,10 @@ h2,
 }
 .text-input {
   width: 350px;
+  border-radius: 3px;
+  border: 1px grey solid;
+  padding: 4px;
+  margin-right: 3px;
 }
 #temperature-description {
   display: inline-block;
@@ -57,12 +55,19 @@ h2,
   opacity: 0.6;
 }
 
-.weather-forecast-temperatures {
+.weather-forecast-temperatures,
+.additionalInfo,
+.currentMinMaxTemp {
   font-size: 18px;
 }
 
 .min-temp {
   opacity: 0.6;
+}
+
+.gitLink {
+  text-decoration: none;
+  color: rgb(91, 160, 171);
 }
 
 footer {
